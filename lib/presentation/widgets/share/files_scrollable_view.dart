@@ -25,7 +25,7 @@ class FileScrollableView extends StatelessWidget {
             return ItemFile(
               file: FileEntity(
                 path: '',
-                name: 'nombre',
+                name: 'Nombre del archivo',
                 type: FileType.pdf,
               ),
             );
