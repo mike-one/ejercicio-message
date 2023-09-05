@@ -1,23 +1,20 @@
-import 'package:ejercicio_files/presentation/widgets/share/files_scrollable_view.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:ejercicio_files/config/theme/app_theme.dart';
+import 'package:ejercicio_files/domain/file_entity.dart';
+import 'package:ejercicio_files/domain/file_type.dart';
 import 'package:ejercicio_files/presentation/providers/file_provider.dart';
+import 'package:ejercicio_files/presentation/widgets/dashboard/dashboard_page.dart';
 
 class Dashboard extends StatelessWidget {
-  const Dashboard
-
-  ({super.key});
+  const Dashboard({super.key});
 
   // ignore: non_constant_identifier_names
-  Widget _add_icon() =>
-      IconButton(
+  Widget _add_icon() => IconButton(
         onPressed: () {},
         icon: const Icon(Icons.attach_file),
       );
 
-  Widget _title() =>
-      const Text(
+  Widget _title() => const Text(
         'Agregar archivos',
         style: TextStyle(fontFamily: 'Roboto'),
       );
@@ -32,10 +29,13 @@ class Dashboard extends StatelessWidget {
       ),
       body: fileProvider.isloading
           ? const Center(child: CircularProgressIndicator(strokeWidth: 2))
-          : Container(
-        color: WHITE_SOLID,
-        child: const FileScrollableView(),
-      ),
+          : DashboardPage(
+              file: FileEntity(
+                path: 'some',
+                name: 'Documento personalizado.xml',
+                type: FileType.audio,
+              ),
+            ),
     );
   }
 }
