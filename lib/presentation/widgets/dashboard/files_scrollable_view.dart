@@ -1,12 +1,13 @@
-import 'package:ejercicio_files/domain/file_entity.dart';
-import 'package:ejercicio_files/domain/file_type.dart';
-import 'package:ejercicio_files/presentation/providers/file_provider.dart';
-import 'package:ejercicio_files/presentation/widgets/share/item_file.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:provider/provider.dart';
+import 'package:ejercicio_files/domain/file_entity.dart';
+import 'package:ejercicio_files/presentation/providers/file_provider.dart';
+import 'package:ejercicio_files/presentation/widgets/dashboard/item_file.dart';
 
 class FileScrollableView extends StatelessWidget {
-  const FileScrollableView({super.key});
+  const FileScrollableView({super.key, required this.file});
+
+  final FileEntity file;
 
   @override
   Widget build(BuildContext context) {
@@ -23,11 +24,7 @@ class FileScrollableView extends StatelessWidget {
           itemCount: 5,
           itemBuilder: (context, index) {
             return ItemFile(
-              file: FileEntity(
-                path: '',
-                name: 'Nombre del archivo',
-                type: FileType.pdf,
-              ),
+              file: file,
             );
           },
         ),
