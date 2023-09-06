@@ -34,11 +34,7 @@ class Dashboard extends StatelessWidget {
       body: fileProvider.isloading
           ? const Center(child: CircularProgressIndicator(strokeWidth: 2))
           : DashboardPage(
-              file: FileEntity(
-                path: 'some',
-                name: 'Documento personalizado.xml',
-                type: FileTypeLocal.audio,
-              ),
+              files: fileProvider.files,
             ),
     );
   }

@@ -6,9 +6,9 @@ import 'package:progress_state_button/iconed_button.dart';
 import 'package:progress_state_button/progress_button.dart';
 
 class DashboardPage extends StatelessWidget {
-  final FileEntity file;
+  final List<FileEntity> files;
 
-  const DashboardPage({super.key, required this.file});
+  const DashboardPage({super.key, required this.files});
 
   Widget button() => ProgressButton.icon(iconedButtons: {
         ButtonState.idle: IconedButton(
@@ -38,7 +38,7 @@ class DashboardPage extends StatelessWidget {
         alignment: Alignment.bottomRight,
         children: [
           FileScrollableView(
-            file: file,
+            files: files,
           ),
           Container(
             padding: const EdgeInsets.only(
