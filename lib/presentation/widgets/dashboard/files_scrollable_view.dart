@@ -5,9 +5,9 @@ import 'package:ejercicio_files/presentation/providers/file_provider.dart';
 import 'package:ejercicio_files/presentation/widgets/dashboard/item_file.dart';
 
 class FileScrollableView extends StatelessWidget {
-  const FileScrollableView({super.key, required this.file});
+  const FileScrollableView({super.key, required this.files});
 
-  final FileEntity file;
+  final List<FileEntity> files;
 
   @override
   Widget build(BuildContext context) {
@@ -21,10 +21,10 @@ class FileScrollableView extends StatelessWidget {
         ),
         child: ListView.builder(
           controller: fileProvider.fileScrollController,
-          itemCount: 5,
+          itemCount: files.length,
           itemBuilder: (context, index) {
             return ItemFile(
-              file: file,
+              file: files[index],
             );
           },
         ),
