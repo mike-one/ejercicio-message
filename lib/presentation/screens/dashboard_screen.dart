@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:ejercicio_files/domain/entities/file_entity.dart';
-import 'package:ejercicio_files/domain/enums/file_type.dart';
 import 'package:ejercicio_files/presentation/providers/file_provider.dart';
 import 'package:ejercicio_files/presentation/widgets/dashboard/dashboard_page.dart';
 

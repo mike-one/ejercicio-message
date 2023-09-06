@@ -20,4 +20,10 @@ class LocalFileDatasource implements FileDatasource {
       // User canceled the picker
     }
   }
+
+  @override
+  Future<List<String?>> setNewFiles(List<FileEntity> files) {
+    // TODO: implement setNewFiles
+    throw UnimplementedError();
+  }
 }
