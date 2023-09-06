@@ -37,7 +37,12 @@ dependencies:
   cupertino_icons: ^1.0.2
   provider: ^6.0.5
   progress_state_button: "^1.0.4"
-
+  #Amplify
+  aws_s3_upload: ^1.5.0
+  #File PICKER
+  file_picker: ^5.5.0
+  #Envs
+  flutter_dotenv: ^5.1.0
 dev_dependencies:
   flutter_test:
     sdk: flutter
@@ -61,6 +66,7 @@ flutter:
   uses-material-design: true
 
   assets:
+    - .env
     - assets/icons/
 
   fonts:

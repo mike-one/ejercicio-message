@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:ejercicio_files/config/theme/app_theme.dart';
-import 'package:ejercicio_files/domain/file_entity.dart';
-import 'package:ejercicio_files/domain/file_type.dart';
+import 'package:ejercicio_files/domain/entities/file_entity.dart';
+import 'package:ejercicio_files/domain/enums/file_type.dart';
 
 class ItemFile extends StatelessWidget {
   final FileEntity file;
@@ -10,17 +10,17 @@ class ItemFile extends StatelessWidget {
 
   String _image() {
     switch (file.type) {
-      case FileType.image:
+      case FileTypeLocal.image:
         return 'assets/icons/image.png';
-      case FileType.pdf:
+      case FileTypeLocal.pdf:
         return 'assets/icons/pdf.png';
-      case FileType.video:
+      case FileTypeLocal.video:
         return 'assets/icons/video.png';
-      case FileType.doc:
+      case FileTypeLocal.doc:
         return 'assets/icons/doc.png';
-      case FileType.audio:
+      case FileTypeLocal.audio:
         return 'assets/icons/audio.png';
-      case FileType.other:
+      case FileTypeLocal.other:
       default:
         return 'assets/icons/image.png';
     }

@@ -1,4 +1,4 @@
-enum FileType {
+enum FileTypeLocal {
   audio,
   doc,
   image,

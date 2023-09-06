@@ -1,16 +1,20 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:ejercicio_files/domain/file_entity.dart';
-import 'package:ejercicio_files/domain/file_type.dart';
+import 'package:ejercicio_files/domain/entities/file_entity.dart';
+import 'package:ejercicio_files/domain/enums/file_type.dart';
 import 'package:ejercicio_files/presentation/providers/file_provider.dart';
 import 'package:ejercicio_files/presentation/widgets/dashboard/dashboard_page.dart';
 
 class Dashboard extends StatelessWidget {
   const Dashboard({super.key});
 
+  Future<void> _onPress(FileProvider fileProvider) async {
+    await fileProvider.loadFile();
+  }
+
   // ignore: non_constant_identifier_names
-  Widget _add_icon() => IconButton(
-        onPressed: () {},
+  Widget _add_icon(FileProvider fileProvider) => IconButton(
+        onPressed: () => _onPress(fileProvider),
         icon: const Icon(Icons.attach_file),
       );
 
@@ -25,7 +29,7 @@ class Dashboard extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: _title(),
-        actions: [_add_icon()],
+        actions: [_add_icon(fileProvider)],
       ),
       body: fileProvider.isloading
           ? const Center(child: CircularProgressIndicator(strokeWidth: 2))
@@ -33,7 +37,7 @@ class Dashboard extends StatelessWidget {
               file: FileEntity(
                 path: 'some',
                 name: 'Documento personalizado.xml',
-                type: FileType.audio,
+                type: FileTypeLocal.audio,
               ),
             ),
     );
