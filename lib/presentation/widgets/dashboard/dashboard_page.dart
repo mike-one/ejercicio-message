@@ -1,5 +1,5 @@
 import 'package:ejercicio_files/config/theme/app_theme.dart';
-import 'package:ejercicio_files/domain/file_entity.dart';
+import 'package:ejercicio_files/domain/entities/file_entity.dart';
 import 'package:ejercicio_files/presentation/widgets/dashboard/files_scrollable_view.dart';
 import 'package:flutter/material.dart';
 import 'package:progress_state_button/iconed_button.dart';

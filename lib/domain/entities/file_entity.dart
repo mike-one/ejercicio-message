@@ -1,10 +1,10 @@
-import 'package:ejercicio_files/domain/file_type.dart';
+import 'package:ejercicio_files/domain/enums/file_type.dart';
 
 class FileEntity {
   final String name;
   final String path;
   final int size;
-  final FileType type;
+  final FileTypeLocal type;
 
   FileEntity({
     required this.path,
