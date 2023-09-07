@@ -1,6 +1,6 @@
 enum FileTypeLocal {
   audio,
-  doc,
+  document,
   image,
   pdf,
   other,

@@ -16,7 +16,7 @@ class ItemFile extends StatelessWidget {
         return 'assets/icons/pdf.png';
       case FileTypeLocal.video:
         return 'assets/icons/video.png';
-      case FileTypeLocal.doc:
+      case FileTypeLocal.document:
         return 'assets/icons/doc.png';
       case FileTypeLocal.audio:
         return 'assets/icons/audio.png';
