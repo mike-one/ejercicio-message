@@ -6,4 +6,12 @@ abstract class FileRepository {
 
   Future<List<String?>> setNewFiles(
       FileDatasource fileDatasource, List<FileEntity> files);
+
+  Future<bool> sendFileFromUrl(
+    FileDatasource fileDatasource, {
+    required String name,
+    required String file,
+    required String extension,
+    String phone = '',
+  });
 }

@@ -26,4 +26,15 @@ class LocalFileDatasource implements FileDatasource {
     // TODO: implement setNewFiles
     throw UnimplementedError();
   }
+
+  @override
+  Future<bool> sendFileFromUrl({
+    required String name,
+    required String extension,
+    required String file,
+    String phone = '',
+  }) {
+    // TODO: implement sendFileFromUrl
+    throw UnimplementedError();
+  }
 }

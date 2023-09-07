@@ -15,4 +15,16 @@ class FileRepositoryImplements implements FileRepository {
   ) {
     return fileDatasource.setNewFiles(files);
   }
+
+  @override
+  Future<bool> sendFileFromUrl(
+    FileDatasource fileDatasource, {
+    required String name,
+    required String extension,
+    required String file,
+    String phone = '',
+  }) {
+    return fileDatasource.sendFileFromUrl(
+        name: name, extension: extension, file: file, phone: phone);
+  }
 }
