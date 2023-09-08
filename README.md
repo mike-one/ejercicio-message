@@ -1,21 +1,19 @@
-<<<<<<< HEAD
 # ejercicio-message
+
 Ejercicio para enviar mensajes a whatsApp con el API de whatsApp negocios
-=======
-# ejercicio_files
 
-A new Flutter project.
+## Instalación
 
-## Getting Started
+Sigue las instrucciones que aparecen en: https://flutter.io/docs/get-started/install/macos
 
-This project is a starting point for a Flutter application.
+Como editor puedes utilizar Android Studio, Visual Studio Code o IntelliJ.
 
-A few resources to get you started if this is your first Flutter project:
+https://flutter.io/docs/get-started/editor?tab=androidstudio
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+Recuerda ejecutar `flutter doctor` al final para asegurarse que todo funciona bien.
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
->>>>>>> 230720f (Comit inicial)
+Se utilizó La versión `3.13.2` de flutter, así que si descargaste apenas el último paquete, tendrás
+que hacer un
+
+`flutter version 3.13.2`, en caso de fallos puedes cambiar de canal con `flutter channel stable` y
+despues hacer un `git checkout 3.13.2`
