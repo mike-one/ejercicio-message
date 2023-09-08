@@ -25,6 +25,10 @@ class FileRepositoryImplements implements FileRepository {
     String phone = '',
   }) {
     return fileDatasource.sendFileFromUrl(
-        name: name, extension: extension, file: file, phone: phone);
+      name: name,
+      extension: extension,
+      file: file,
+      phone: phone,
+    );
   }
 }

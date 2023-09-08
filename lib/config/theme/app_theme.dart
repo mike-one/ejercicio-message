@@ -1,5 +1,3 @@
-// ignore_for_file: constant_identifier_names
-
 import 'package:flutter/material.dart';
 
 class AppTheme {
@@ -9,7 +7,8 @@ class AppTheme {
       );
 }
 
-const WHITE_SOLID = Color(0xFFFFFFFF);
 const BLACK_SOLID = Color(0xFF000000);
 const BLACK_LIGHT = Color(0x1F000000);
+const GREEN_SUCCESSFUL = Color(0x22616C93);
 const LIGHT_GRAY = Color(0x22616C93);
+const WHITE_SOLID = Color(0xFFFFFFFF);

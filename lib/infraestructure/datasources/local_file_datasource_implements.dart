@@ -8,6 +8,7 @@ class LocalFileDatasource implements FileDatasource {
   Future<FileEntity> getNewFile() async {
     // Select a file from the device
     FilePickerResult? result;
+
     try {
       result = await FilePicker.platform.pickFiles();
     } catch (error) {
@@ -17,7 +18,6 @@ class LocalFileDatasource implements FileDatasource {
       return LocalFileModel.fromFile(result).toLocalFile();
     } else {
       throw Exception('cancelled');
-      // User canceled the picker
     }
   }
 

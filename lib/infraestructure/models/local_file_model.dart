@@ -22,11 +22,13 @@ class LocalFileModel {
 
   factory LocalFileModel.fromFile(FilePickerResult filePickerResult) =>
       LocalFileModel(
-        extension: filePickerResult.files.single.extension ?? '',
+        extension: filePickerResult.files.single.extension?.toLowerCase() ?? '',
         path: filePickerResult.files.single.path.toString(),
         name: filePickerResult.files.single.name.toLowerCase(),
         type: ExtractType.getType(
-            filePickerResult.files.single.extension?.toString() ?? ''),
+          filePickerResult.files.single.extension?.toString().toLowerCase() ??
+              '',
+        ),
         size: filePickerResult.files.single.size,
         contentType: ExtractType.getContentType(
           filePickerResult.files.single.extension.toString().toLowerCase(),
