@@ -40,8 +40,6 @@ PODS:
     - Flutter
   - permission_handler_apple (9.1.1):
     - Flutter
-  - rive_common (0.0.1):
-    - Flutter
   - SDWebImage (5.18.0):
     - SDWebImage/Core (= 5.18.0)
   - SDWebImage/Core (5.18.0)
@@ -55,7 +53,6 @@ DEPENDENCIES:
   - flutter_contacts (from `.symlinks/plugins/flutter_contacts/ios`)
   - fluttercontactpicker (from `.symlinks/plugins/fluttercontactpicker/ios`)
   - permission_handler_apple (from `.symlinks/plugins/permission_handler_apple/ios`)
-  - rive_common (from `.symlinks/plugins/rive_common/ios`)
   - video_compress (from `.symlinks/plugins/video_compress/ios`)
 
 SPEC REPOS:
@@ -76,8 +73,6 @@ EXTERNAL SOURCES:
     :path: ".symlinks/plugins/fluttercontactpicker/ios"
   permission_handler_apple:
     :path: ".symlinks/plugins/permission_handler_apple/ios"
-  rive_common:
-    :path: ".symlinks/plugins/rive_common/ios"
   video_compress:
     :path: ".symlinks/plugins/video_compress/ios"
 
@@ -89,7 +84,6 @@ SPEC CHECKSUMS:
   flutter_contacts: edb1c5ce76aa433e20e6cb14c615f4c0b66e0983
   fluttercontactpicker: d582836dea6b5d489f3d259f35d7817ae82ee5e6
   permission_handler_apple: e76247795d700c14ea09e3a2d8855d41ee80a2e6
-  rive_common: 8a159d68033a8b073e5853acc50f03aa486a2888
   SDWebImage: 182830bcddc30cde95fbc60dfe4badc3553d94ba
   SwiftyGif: 93a1cc87bf3a51916001cf8f3d63835fb64c819f
   video_compress: fce97e4fb1dfd88175aa07d2ffc8a2f297f87fbe
