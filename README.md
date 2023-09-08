@@ -21,6 +21,6 @@ despues hacer un `git checkout 3.13.2`
 # Credenciales
 
 Para agregar las credenciales haz:
-cp env.template .env
+`cp env.template .env`
 
 Luego agrega las credenciales en el archivo .env
