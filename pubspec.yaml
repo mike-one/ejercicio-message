@@ -79,7 +79,7 @@ flutter:
     - assets/images/
 
   fonts:
-    - family: CuencaIcons
+    - family: MikeIcons
       fonts:
         - asset: assets/fonts/MikeIcons.ttf
     - family: Roboto
