@@ -1,8 +1,8 @@
+import 'package:flutter_dotenv/flutter_dotenv.dart';
+import 'package:dio/dio.dart';
 import 'package:ejercicio_files/config/helpers/extract_type.dart';
 import 'package:ejercicio_files/domain/datasources/file_datasource.dart';
 import 'package:ejercicio_files/domain/entities/file_entity.dart';
-import 'package:dio/dio.dart';
-import 'package:flutter_dotenv/flutter_dotenv.dart';
 
 class WhatsAppDatasource implements FileDatasource {
   final dio = Dio();
@@ -20,34 +20,32 @@ class WhatsAppDatasource implements FileDatasource {
     required String extension,
     String phone = '',
   }) async {
-    var response;
-    print('numero en el sendFile:$phone');
-    print('extension: $extension');
     try {
-      final data = getJson(
+      final data = _getJson(
         name: name,
         file: file,
         extension: extension,
         phone: phone,
       );
-      print('dataaa: $data');
-      response = await dio.post(
+      await dio.post(
         'https://waba-v2.360dialog.io/messages',
         options: Options(
           headers: {
             'Content-Type': 'application/json',
-            'D360-API-KEY': dotenv.get('ACCESSKEY_360', fallback: 'not Found')
+            'D360-API-KEY': dotenv.get(
+              'ACCESSKEY_360',
+              fallback: 'not Found',
+            )
           },
         ),
         data: data,
       );
-      print('imprime:${response}');
       return true;
     } catch (error) {}
     return false;
   }
 
-  Map<String, dynamic> getJson({
+  Map<String, dynamic> _getJson({
     required String name,
     required String file,
     required String extension,
@@ -60,7 +58,7 @@ class WhatsAppDatasource implements FileDatasource {
       'type': ExtractType.getTypeString(extension)
     };
     Map<String, dynamic> content = {'link': file};
-    switch (extension) {
+    switch (ExtractType.getTypeString(extension)) {
       case 'audio':
         json['audio'] = content;
         break;

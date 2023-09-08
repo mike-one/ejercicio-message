@@ -48,6 +48,9 @@ dependencies:
   dio: ^5.3.2
   flutter_contacts: ^1.1.7+1
   fluttercontactpicker: ^4.7.0
+  image: ^4.0.17
+  video_compress: ^3.1.2
+
 dev_dependencies:
   flutter_test:
     sdk: flutter
@@ -73,6 +76,7 @@ flutter:
   assets:
     - .env
     - assets/icons/
+    - assets/images/
 
   fonts:
     - family: CuencaIcons

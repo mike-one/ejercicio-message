@@ -22,7 +22,7 @@ class ItemFile extends StatelessWidget {
         return 'assets/icons/audio.png';
       case FileTypeLocal.other:
       default:
-        return 'assets/icons/image.png';
+        return 'assets/icons/doc.png';
     }
   }
 

@@ -29,7 +29,7 @@ class Dashboard extends StatelessWidget {
         title: _title(),
         actions: [_add_icon(fileProvider)],
       ),
-      body: fileProvider.isloading
+      body: fileProvider.isLoading
           ? const Center(child: CircularProgressIndicator(strokeWidth: 2))
           : DashboardPage(
               files: fileProvider.files,
