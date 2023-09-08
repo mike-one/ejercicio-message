@@ -9,6 +9,6 @@ class AppTheme {
 
 const BLACK_SOLID = Color(0xFF000000);
 const BLACK_LIGHT = Color(0x1F000000);
-const GREEN_SUCCESSFUL = Color(0x22616C93);
+const GREEN_SUCCESSFUL = Color(0xFF00B7B0);
 const LIGHT_GRAY = Color(0x22616C93);
 const WHITE_SOLID = Color(0xFFFFFFFF);
